@@ -60,7 +60,7 @@ class MainTest {
         burger.setId(1L);
         burger.setName("Vegan Delight");
         burger.setPrice(8.99);
-        burger.setIsVegan(true);
+        burger.setVegan(true);
         burger.setBreadType(BreadType.WRAP);
         burger.setContents("Lettuce, Tomato, Vegan Patty, Avocado");
 
@@ -68,7 +68,7 @@ class MainTest {
         assertEquals(1L, burger.getId());
         assertEquals("Vegan Delight", burger.getName());
         assertEquals(8.99, burger.getPrice());
-        assertEquals(true, burger.getIsVegan());
+        assertEquals(true, burger.isVegan());
         assertEquals(BreadType.WRAP, burger.getBreadType());
         assertEquals("Lettuce, Tomato, Vegan Patty, Avocado", burger.getContents());
     }
@@ -182,7 +182,7 @@ class MainTest {
 
 
         assertEquals(expectedMessage, exception.getMessage(), "The exception message should match the expected value.");
-        assertEquals(expectedStatus, exception.getHttpStatus(), "The HttpStatus should match the expected value.");
+        assertEquals(expectedStatus, exception.getStatus(), "The HttpStatus should match the expected value.");
     }
 
     @Test
